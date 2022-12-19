@@ -1,0 +1,23 @@
+doctype html
+html(lang='pt-br')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Ver livros
+    link(rel='stylesheet', href='/stylesheets/styleView.css')
+  body
+    each livre in livros
+      #cardLivros
+        #tituloL
+          p#title=livre.livro
+        #textoL
+          p#text=livre.sinopse
+        
+        #div11
+          button#open-modal ATUALIZAR
+          a(href=livre.url+'/delete')
+            button DELETAR
+          a(href='/livrospage')
+            button#open-modal VOLTAR
+    script(src='/javascripts/script.js')

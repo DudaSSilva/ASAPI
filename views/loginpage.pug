@@ -1,0 +1,33 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width')
+    title replit
+    link(href='style.css' rel='stylesheet' type='text/css')
+  body#inicio2
+    .container
+      img(src='images/logo.png')
+      form#formulario
+        div
+          div
+            label(for='texto') Usuário ou email:
+          div
+            input#usuario(type='text' placeholder='example@email.com')
+        div
+          div
+            label(for='texto') Senha:
+          div
+            input#senha(type='text' placeholder='*********')
+          a(href='redefinirSenha.html')
+            h4 Esqueci minha senha
+        #cadastro
+          label(for='texto') Não tem conta?
+          a(href='cadastroPage.html')
+            h3 CADASTRE-SE
+      #container
+        button(onclick="entrar('usuario', 'senha')") ENTRAR
+        a(href='https://www.instagram.com/academicsyllabus/')
+          button SIGA-NOS NO INSTAGRAM
+    script(src='script.js')
+    script(src='https://replit.com/public/js/replit-badge.js' theme='blue' defer='')

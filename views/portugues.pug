@@ -1,0 +1,43 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width')
+    title Conteudos
+    link(rel='stylesheet', href='/stylesheets/styleCadastrar.css')
+body
+  #fade.hide
+  #modal.hide
+    .modal-header
+      h2(style='color: #ED1F30;') Cadastrar Conteúdos
+      button#close-modal(style='color: black; background-color: transparent') X
+    .modal-body
+      div
+      p=msg
+      form#form(action='/conteudo/create/' method='POST')
+        input.inputs(name="nomedisciplina" type='text' value='' placeholder='Insira o nome do assunto')
+        input.inputs(name="conteudo1" type='text' value='' placeholder='Insira um conteudo')
+        input.inputs(name="conteudo2" type='text' value='' placeholder='Insira um conteudo')
+        input.inputs(name="conteudo3" type='text' value='' placeholder='Insira um conteudo')
+        input.inputs(name="conteudo4" type='text' value='' placeholder='Insira um conteudo')
+        input.inputs(name='value' type='text' value='' placeholder='conteudo concluído? 0 para não ou 1 para sim')
+        input#inputB(type='submit' value='cadastrar')
+
+  #container
+    #navbar
+      #logoTitulo
+        img(src='images/logo.png')
+        p LISTA DE CONTEUDOS
+      #imagensPerfilConfig
+        img(src='icons/9.svg')
+        img(src='icons/10.svg')
+    span
+      button#open-modal(style='color: white;') Cadastrar
+      a(href='/viewconteudos')
+        button#open-modal(style='color: white;') Visualizar
+      a(href='/conteudo')
+        button#open-modal(style='color: white;') JSON
+      a(href='/conteudospage')
+        button#open-modal(style='color: white;') VOLTAR
+
+  script(src='/javascripts/script2.js')

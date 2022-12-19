@@ -1,0 +1,24 @@
+doctype html
+html(lang='pt-br')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Flashcards
+    link(rel='stylesheet', href='/stylesheets/styleView.css')
+  body
+    each flashcard in flashcards
+      #cardFlashcard
+        #tituloF
+          img(src=flashcard.URL)
+          p#title=flashcard.title
+        #textoF
+          p#text=flashcard.text
+        
+        #divF
+          button#open-modal ATUALIZAR
+          a(href=flashcard.url+'/delete')
+            button EXCLUIR
+          a(href='/flashcardspage')
+            button#open-modal VOLTAR
+    script(src='/javascripts/script.js')

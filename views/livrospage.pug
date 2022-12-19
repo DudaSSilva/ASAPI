@@ -1,0 +1,39 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width')
+    title Livro
+    link(rel='stylesheet', href='/stylesheets/styleCadastrar.css')
+body
+  #fade.hide
+  #modal.hide
+    .modal-header
+      h2(style='color: #ED1F30;') Cadastrar Livro
+      button#close-modal(style='color: black; background-color: transparent') X
+    .modal-body
+      div
+      p=msg
+      form#form(action='/livros/create/' method='POST')
+        input.inputs(name="livro" type='text' value='' placeholder='Insira o nome do livro')
+        input.inputs(name="sinopse" type='text' value='' placeholder='Insira a sinopse ')
+        input#inputB(type='submit' value='cadastrar')
+
+  #container
+    #navbar
+      #logoTitulo
+        img(src='images/logo.png')
+        p LIVROS
+      #imagensPerfilConfig
+        img(src='icons/9.svg')
+        img(src='icons/10.svg')
+    span
+      button#open-modal(style='color: white;') CADASTRAR
+      a(href='/viewlivros')
+        button#open-modal(style='color: white;') VISUALIZAR
+      a(href='/livros')
+        button#open-modal(style='color: white;') JSON
+      a(href='/menu')
+        button#open-modal(style='color: white;') VOLTAR
+
+  script(src='/javascripts/script2.js')

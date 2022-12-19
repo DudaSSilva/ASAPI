@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width')
+    title Rotas
+    link(rel='stylesheet', href='/stylesheets/style.css')
+body
+  #container
+    #navbar
+      #logoTitulo
+        img(src='images/logo.png')
+        p Rotas
+      #imagensPerfilConfig
+        img(src='icons/9.svg')
+        img(src='icons/10.svg')
+    #cards
+      button#card1(value='disabled')
+        p asapi.eduardasoares1.repl.co/livros
+      button#card2(value='disabled')
+        p asapi.eduardasoares1.repl.co/tarefas
+      button#card3(value='disabled')
+        p asapi.eduardasoares1.repl.co/conteudo
+      button#card1(value='disabled')
+        p asapi.eduardasoares1.repl.co/habitos
+      button#card2(value='disabled')
+        p asapi.eduardasoares1.repl.co/flashcards
+      button#card3(value='disabled')
+        p asapi.eduardasoares1.repl.co/conquistas
+    span
+      a(href='/jsonpage')
+        button#open-modal(style='color: white;') JSON
+      a(href='/menu')
+        button#open-modal(style='color: white;') MENU
+
+  script(src='/javascripts/script2.js')

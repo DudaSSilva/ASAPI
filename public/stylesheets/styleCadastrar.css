@@ -1,0 +1,222 @@
+html, body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background-image: url('../images/gif3.gif'); 
+  background-size: 100%;
+}
+
+span {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+#container a{
+  color: #ED1F30;
+  text-decoration-color: #383838;
+  text-decoration: none;
+}
+
+#container button{
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  width: 300px;
+  background: #F25E7A;
+  color: #FCDBDB;
+  font-weight: bold;
+  margin: 10px;
+}
+
+#navbar {
+  background-color: #D7525B;
+  height: 3em;
+  width: 100%;
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+  justify-items: space-between;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+  display: flex;
+  flex-direction: row;
+}
+
+#navbar img{
+  height: 50px;
+  width: 50px;
+}
+
+#logoTitulo {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+  align-items: center;
+}
+
+#imagensPerfilConfig {
+  margin-right: 20px;
+}
+
+#cardTarefa {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;
+  border: 2px solid #383838;
+  background: #D7525B;
+  color: white;
+}
+
+#titulo {
+  background: #FFCEEF;
+  border-bottom: 2px solid #383838;
+  color: #ED1F30;
+  width: 300px;
+  height: 50px;
+  text-align: start;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#titulo p {
+  font-size: 25px;
+  margin: 10px;
+}
+
+#button {
+  background-color: #ED1F30;
+  opacity: 0.6;
+  color: white;
+  font-size: 16px;
+  width: 400px;
+  height: 130px;
+  margin: 10px;
+  border-radius: 15px;
+}
+
+#button:hover {
+  cursor: pointer;
+  background-color: #ED1F30;
+}
+
+#form {
+  
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
+/* Estilização do formulário de cadastro */
+
+.inputs {
+  margin: 5px;
+  height: 2rem;
+  padding: 5px;
+}
+
+#inputB {
+    margin: 5px;
+    height: 2rem;
+    background: #D7525B;
+    color: white;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+}
+
+#inputB:hover {
+    background: #ED1F30;
+}
+
+button {
+    padding: 0.6rem 1.2rem;
+    background-color: #6f6d6d;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+#open-modal {
+  background-color: #ED1F30;
+  opacity: 0.6;
+  color: white;
+  font-size: 16px;
+  width: 400px;
+  height: 130px;
+  margin: 10px;
+  border-radius: 15px;
+}
+
+#open-modal:hover {
+  cursor: pointer;
+  background-color: #ED1F30;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+#fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+
+#modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    max-width: 90%;
+    background-color: #FCDBDB;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+    z-index: 10;
+}
+
+#fade,
+#modal {
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+    cursor: pointer;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+.modal-body p {
+    margin-bottom: 1rem;
+}
+
+#modal.hide,
+#fade.hide {
+    opacity: 0;
+    pointer-events: none;
+    cursor: auto;
+}
+
+#modal.hide {
+    top: 0;
+}

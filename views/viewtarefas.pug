@@ -1,0 +1,52 @@
+doctype html
+html(lang='pt-br')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Ver tarefas
+    link(rel='stylesheet', href='/stylesheets/styleView.css')
+  body
+    #fade.hide
+    #modal.hide
+      .modal-header
+        h2(style='color: #ED1F30;') Atualizar tarefa
+        button#close-modal(style='color: black; background-color: transparent') X
+      .modal-body
+        div
+        p=msg
+        form#form(action='/tarefas/update' method='POST')
+          input(type="hidden" id="target" name="target" value="")
+          input.inputs(name="nomeLista" type='text' value='' placeholder='Insira o nome da lista de tarefas')
+          input#inputB(type='submit' value='atualizar')
+    each tarefa in tarefas
+      #cardTarefa
+        #titulo
+          p#nomeLista=tarefa.nomeLista
+        #t1
+          input#t1(type='checkbox' name='interest' value='t1') 
+          label(for='t1') 
+            p#tarefa1=tarefa.tarefa1
+        #t2
+          input#t2(type='checkbox' name='interest' value='t2')
+          label(for='t2') 
+            p#tarefa1=tarefa.tarefa2
+        #t3
+          input#t3(type='checkbox' name='interest' value='t3')
+          label(for='t3') 
+            p#tarefa3=tarefa.tarefa3
+        #t4
+          input#t4(type='checkbox' name='interest' value='t4')
+          label(for='t4') 
+            p#tarefa4=tarefa.tarefa4
+        #t5
+          input#t5(type='checkbox' name='interest' value='t5')
+          label(for='t5') 
+            p#tarefa5=tarefa.tarefa5
+        #div11
+          button#open-modal ATUALIZAR
+          a(href=tarefa.url+'/delete')
+            button DELETAR
+          a(href='/tarefaspage')
+            button#open-modal VOLTAR
+    script(src='/javascripts/script.js')

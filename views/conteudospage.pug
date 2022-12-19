@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width')
+    title Disciplinas
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body(style="background-image: url('../images/gif3.gif'); background-size: 100%;")
+    .container
+      #navbar
+        #logoTitulo
+          img(src='images/logo.png')
+          p DISCIPLINAS
+        #imagensPerfilConfig
+          img(src='icons/9.svg')
+          img(src='icons/10.svg')
+      #disciplinasOpcoes
+        a(href='/portugues')
+          button#op4 PORTUGUÊS
+        button#op2(value='disabled') MATEMÁTICA
+        button#op2(value='disabled') HISTÓRIA
+        button#op2(value='disabled') ESPANHOL
+        button#op2(value='disabled') SOCIOLOGIA
+        a(href='/menu')
+          button#op4 VOLTAR
+    script(src='script.js')
+  script(src='/javascripts/script2.js')
